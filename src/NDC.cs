@@ -241,7 +241,7 @@ namespace log4net
 		/// </code>
 		/// </example>
 		/*[Obsolete("NDC has been replaced by ThreadContext.Stacks")]*/
-	public static IDisposable Push(string message) 
+		public static IDisposable Push(string message) 
 		{
 			return ThreadContext.Stacks["NDC"].Push(message);
 		}
@@ -279,7 +279,7 @@ namespace log4net
 		/// </code>
 		/// </example>
 		/*[Obsolete("NDC has been replaced by ThreadContext.Stacks")]*/
-	public static IDisposable PushFormat(string messageFormat, params object[] args)
+		public static IDisposable PushFormat(string messageFormat, params object[] args)
 		{
 			return Push(string.Format(messageFormat, args));
 		}
